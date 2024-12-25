@@ -1,0 +1,136 @@
+/* Basic styles for the game */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* The board is a grid with 3x3 cells */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 5px;
+    width: 300px;
+    height: 300px;
+    margin: 20px auto;
+}
+
+.square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #333;
+    font-size: 2em;
+    cursor: pointer;
+    background-color: #fff;
+    transition: background-color 0.3s;
+}
+
+.square:hover {
+    background-color: #e0e0e0;
+}
+
+.status {
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Media Queries for responsiveness */
+
+/* For tablets and larger screens */
+@media (max-width: 768px) {
+    .board {
+        width: 250px;
+        height: 250px;
+    }
+
+    .square {
+        font-size: 1.5em;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+}
+
+/* For smaller mobile screens */
+@media (max-width: 480px) {
+    .board {
+        width: 200px;
+        height: 200px;
+    }
+
+    .square {
+        font-size: 1.2em;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .status {
+        font-size: 1em;
+    }
+
+    button {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+}
+
+/* For very small screens (e.g., portrait mode mobile) */
+@media (max-width: 320px) {
+    .board {
+        width: 180px;
+        height: 180px;
+    }
+
+    .square {
+        font-size: 1em;
+    }
+
+    h1 {
+        font-size: 1.6em;
+    }
+
+    button {
+        font-size: 0.8em;
+        padding: 6px 12px;
+    }
+}
